@@ -1,22 +1,15 @@
 
 import React from 'react'
-import { Image, Pressable, SafeAreaView, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native'
-import { Button, Text } from 'react-native-web'
-import { AntDesign } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
+import { Image, KeyboardAvoidingView, Pressable, SafeAreaView, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native'
+import { Text } from 'react-native-web'
 import { FontAwesome } from '@expo/vector-icons';
-import { Appbar } from 'react-native-paper';
-
+ 
 export default function LogIn() {
+
+    
   return (
     <SafeAreaView>
-      {/* <Appbar.Header style={{backgroundColor:'white'}}>
-      <TouchableOpacity>
-          <AntDesign name="left" size={25} color="black" />
-        </TouchableOpacity>
-      </Appbar.Header> */}
-
-       
+      <KeyboardAvoidingView>
           <View>
              <View>
               <Image
@@ -41,22 +34,21 @@ export default function LogIn() {
                 
                   </View>
              
-                  <View style={{backgroundColor:'black',height:45,width:308,borderRadius:25,marginTop:25,marginBottom:20,alignSelf:'center'}} >
-                    <Pressable style={{alignSelf:'center'}}>
-                      <Text style={styles.signuptext}>Sign In</Text>
-                    </Pressable>
-                  </View>
+                  <TouchableOpacity style={{backgroundColor:'black',height:45,width:308,borderRadius:25,marginTop:25,marginBottom:20,alignSelf:'center'}}>
+                       <Text style={styles.signuptext}>Sign Up</Text>
+                  </TouchableOpacity>
 
             
-                <Pressable style={{fontWeight:400,marginBottom:10}}>
+                <TouchableOpacity style={{fontWeight:400,marginBottom:10}}>
                   <Text style={{alignSelf:'center'}}>Forgot password?</Text>
-                </Pressable>
+                </TouchableOpacity>
                 
                
-                <Pressable style={{fontWeight:400,marginBottom:10}}>
+                <TouchableOpacity style={{fontWeight:400,marginBottom:10}}>
                 <Text style={{alignSelf:'center'}}>Don't have an account?</Text>
-              </Pressable>
-          </View>   
+              </TouchableOpacity>
+          </View>  
+          </KeyboardAvoidingView> 
     </SafeAreaView>
      
   )

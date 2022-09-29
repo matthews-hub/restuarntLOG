@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { Image, Pressable, SafeAreaView, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native'
- 
+import * as Progress from 'react-native-progress';
 
 export default function LandingPage() {
   return (
@@ -13,7 +13,12 @@ export default function LandingPage() {
                   style={{ width: 300, height: 300, alignSelf:'center',marginBottom:60,marginTop:90}}
                 />
               </View>
-          </View>   
+ 
+          </View>  
+          <View>
+          <Progress.CircleSnail color={['red', 'green', 'blue']} size={100} style={{alignSelf:'center'}}/>
+          </View> 
+          
     </SafeAreaView>
      
   )
